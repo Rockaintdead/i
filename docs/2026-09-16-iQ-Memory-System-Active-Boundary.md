@@ -1,7 +1,7 @@
 # iQ Memory System Active-Build Boundary
 
 **Date:** 16 September 2026  
-**Status:** recorded and published to GitHub `main`  
+**Status:** recorded and published to GitHub `main`
 **Authority:** Owner authorised the active-versus-legacy boundary, restoration of Policy 1, and the matching README status statement.
 
 ## Scope
