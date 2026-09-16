@@ -2,8 +2,8 @@
 
 **Date:** 2026-09-16
 **Repository:** `Rockaintdead/i`
-**Stage:** Stage 1 only
-**Status:** Stage 1 verified from GitHub commit and workflow evidence.
+**Stage:** Stages 1 and 2 evidenced; Phase 3 memory-model research recorded.
+**Status:** Stage 1 verified from GitHub commit and workflow evidence. Stage 2 production schema application is structurally verified. Phase 3 is a research and design record only; no Phase 3 runtime implementation is claimed.
 
 ---
 
@@ -203,3 +203,85 @@ It also returned these four live triggers:
 - `tasks.tasks_guarded_lifecycle`
 **Verification boundary:** No synthetic test records were inserted into production. The negative and positive behavioural tests remain documented from the isolated temporary branch, where the identical schema was executed and verified before production application.
 **Current status:** Stage 2 schema is applied and structurally verified in production. Stage 3 runtime-gate implementation remains out of scope and requires separate authorization.
+
+---
+
+## 10. Phase 3 -- Memory Model V1 Research Record
+
+**Authority:** The Owner requested that the current iQ memory-model research be recorded in this human-readable Git document on 2026-09-16.
+
+**Scope of this phase:** Record the researched iQ memory model and its implementation sequence. This phase does not authorize runtime implementation, Neon or D1 schema changes, memory migration, deployment, data movement, deletion, or changes to any Notion owner.
+
+### 10.1 Research conclusion
+
+iQ memory is not one generic memory store. The intended model has four distinct, cooperating lanes:
+
+- **Working memory:** compact, high-signal, scoped context for continuing work. It may include provisional context, active work, blockers, and unresolved material. It is not automatically canonical truth.
+- **Episodic memory:** dated evidence of what happened, including conversations, observations, actions, receipts, and experiences.
+- **Semantic memory:** durable knowledge, understood facts, preferences, conclusions, relationships, and learned knowledge that should influence later reasoning.
+- **Procedural memory:** approved reusable methods, workflows, skills, and operating procedures.
+
+The current human-readable owner is `iQ Memory`, which declares these four lanes. Its current verification state is `Degraded`; the existence of the model and owner does not prove that the runtime implementation works end to end.
+
+### 10.2 Boundaries
+
+- **Current Position is not a fifth memory type.** It is a scoped, verified projection assembled from canonical owners, accepted memory, evidence, and active commitments. It answers: objective, present state, material change, active work, blockers, decisions needed, next action, and evidence/freshness.
+- **Prospective memory is not a separate generic memory lane.** Future commitments remain owned by their specialist systems: Goals, Projects, Tasks, Routines, Bills, and calendar records. Working Memory and Current Position may reference them.
+- **Domain truth remains with its declared owner.** Memory may point to a Task, Project, decision, financial record, file, person, or relationship, but must not replace that owner's current truth.
+- **Search and vector retrieval are discovery aids, not authority.** Retrieved material must resolve through the relevant current owner and evidence rules before it can guide consequential work.
+- **Legacy Working Memory and historical SAVEs are recovery evidence only.** They must never silently become the current Working-memory route.
+
+### 10.3 Admission and lifecycle model
+
+The researched path is:
+
+```text
+Signal or interaction
+  -> capture source and scope
+  -> episodic evidence
+  -> candidate interpretation
+  -> compare with canonical owner and existing memory
+  -> promote, correct, defer, or mark conflict under the relevant rule
+  -> reconcile Working Memory / Current Position
+  -> retrieve bounded, source-linked context when needed
+```
+
+An episode is not automatically a fact. A model interpretation is not automatically a remembered truth. A procedure is not automatically approved because it worked once. Corrections must retain the earlier state, source, and reason for supersession.
+
+### 10.4 Proposed build sequence
+
+1. Read-only audit the existing `iQ Memory` four-lane schema, current code paths, owner routing, and legacy Working Memory records. Produce an `EXISTS -> REUSE -> MISSING -> RECOVERY-ONLY` map.
+2. Define lane-specific admission, lifecycle, scope, provenance, verification, confidence, conflict, supersession, and retention rules.
+3. Implement and prove episodic capture first: authenticated, dated, scoped source evidence and operation receipts.
+4. Implement a Working Memory reconciler that creates compact per-scope continuity records from canonical owners and relevant evidence.
+5. Implement controlled semantic promotion and correction, preserving evidence and historical versions.
+6. Implement procedural learning as versioned candidate methods linked to the canonical Prompts/procedure owner; do not duplicate procedure text into a competing memory owner.
+7. Implement bounded cross-lane retrieval: current canonical owner, verified Working Memory, relevant Semantic memory, relevant Episodes, and Procedural memory only when deciding how to operate.
+8. Implement Current Position as a derived, scoped service rather than a manual SAVE lookup.
+9. Prove one end-to-end loop in an isolated preview: capture -> episode -> Working reconciliation -> verified semantic promotion -> fresh-session retrieval with evidence -> correction -> non-retrieval after removal from active memory.
+10. Only after the core loop is proven, consider proactive consolidation, index rebuilding, conflict detection, candidate lessons, and a nightly learning cycle.
+
+### 10.5 Phase 3 acceptance boundary
+
+Phase 3 can only be called implemented after a fresh, authenticated client can complete the following without relying on chat history:
+
+1. Capture a meaningful source event with scope and provenance.
+2. Retrieve its episodic record correctly.
+3. Reconcile a bounded Working-memory record for the same scope.
+4. Promote one verified item to Semantic memory through its declared rule.
+5. Retrieve the current result in a new session with cited source/evidence.
+6. Correct the item without losing its earlier version or reason for change.
+7. Exclude a removed item from active retrieval and state the exact deletion/retention verification level honestly.
+8. Retrieve an approved procedure without presenting a model-generated suggestion as an approved method.
+
+### 10.6 Evidence sources used for this record
+
+- Current iQ Memory owner record: `https://app.notion.com/p/a3491085d0424b40b530b7bc4d71e66a`
+- Current iQ Intelligence page: `https://app.notion.com/p/ea8c641336cc43088217fbde7eae4c11`
+- Current Spine: `https://app.notion.com/p/3d4a3bb9a4028187828dd4187959e427`
+- iQ Intelligence Architecture, Memory, Bootstrap & Notion Control Plane proposal v2.0: `https://app.notion.com/p/3daa3bb9a40281da855be0e22fa50a8f`
+- iQ Second Brain -- Purpose, Findings & Completion Plan: `https://app.notion.com/p/3dca3bb9a402817e9ae6ee781a752177`
+
+### 10.7 Stop point
+
+This record documents the Phase 3 research model only. The next action is the proposed read-only Memory Model V1 audit. Any implementation, schema change, migration, deployment, or data operation requires separate explicit authorization.
