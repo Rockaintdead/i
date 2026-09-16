@@ -85,6 +85,7 @@ For consequential work, iQ stops when authority, scope, evidence, or verificatio
 | SRT enforcement | Verified | [SRT conversation record](docs/2026-09-16-iQ-SRT-conversation-record.md) |
 | Enforcement Spine V1 | Stages 1 and 2 evidenced | [Enforcement Spine record](docs/2026-09-16-iQ-Enforcement-Spine-V1.md) |
 | Memory Model V1 | Research and design recorded; implementation awaiting separate authority | [Phase 3 record](docs/2026-09-16-iQ-Enforcement-Spine-V1.md#10-phase-3----memory-model-v1-research-record) |
+| Repository operating rules | Current and published | [AGENTS.md](AGENTS.md) |
 
 **Next proposed slice:** a read-only audit of the four memory lanes, current code paths, owner routing, and legacy Working Memory. Its output is an `EXISTS -> REUSE -> MISSING -> RECOVERY-ONLY` map before any Memory V1 implementation begins.
 

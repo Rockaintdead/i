@@ -285,3 +285,17 @@ Phase 3 can only be called implemented after a fresh, authenticated client can c
 ### 10.7 Stop point
 
 This record documents the Phase 3 research model only. The next action is the proposed read-only Memory Model V1 audit. Any implementation, schema change, migration, deployment, or data operation requires separate explicit authorization.
+
+---
+
+## 11. Repository Agent Operating Rules
+
+**Authority:** The Owner explicitly authorised the addition of the standing repository agent rules on 2026-09-16.
+
+**Change:** `AGENTS.md` now defines the repository's operational rules for purpose and authority, required orientation, scope and human gates, the exact SRT contract, evidence before completion claims, secrets and repository hygiene, the Phase 3 Memory Model V1 boundary, and README maintenance.
+
+**Why:** The README is a human-facing iQ front door, but it cannot by itself ensure that future intelligence clients resolve authority, respect human gates, preserve the exact SRT contract, maintain evidence, and stop at Phase 3's implementation boundary.
+
+**Verification boundary:** This is a documentation and repository-instruction change only. It does not prove runtime enforcement, workflow execution, deployment, authentication, memory functionality, or production behaviour.
+
+**Standing rule:** For every consequential iQ change, future agents must update the detailed human-readable record under `docs/` and the current-state summary in `README.md` before reporting completion.
