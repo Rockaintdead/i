@@ -1,15 +1,26 @@
 # iQ
 
-**A personal intelligence system that holds the thread: what matters, what happened, what is true now, and what to do next.**
+## Know me. Understand what matters. Hold the thread. Help me move toward the future I chose.
 
-iQ connects human direction, governed memory, evidence, and useful action across life and work. It is built to be understandable, correctable, and evidence-backed -- not a black box that merely sounds certain.
+iQ is a trusted personal intelligence system: a persistent companion that captures what happens, remembers what matters, connects relevant context, shows what is true now, and helps a person take the next useful action toward the life they choose.
+
+### The North Star
+
+**Help people move toward the future they choose without losing the thread of their lives.**
+
+### What We Are Building
+
+- One personal intelligence layer across life and work.
+- Memory that distinguishes what happened, what is true, what is current, and how to do things.
+- A calm Current Position view that answers: where am I, what matters, what changed, and what next?
+- Safe, evidence-backed help that proposes action while keeping the human in charge.
 
 > **Current build state -- 16 September 2026**
 > Stage 1 SRT validation is verified. Stage 2 task and evidence enforcement schema is structurally verified in production. Phase 3 records the Memory Model V1 research and build path; Memory V1 runtime implementation has **not** started.
 
 ---
 
-## What iQ Is Building
+## System Model
 
 ```text
 You

@@ -299,3 +299,17 @@ This record documents the Phase 3 research model only. The next action is the pr
 **Verification boundary:** This is a documentation and repository-instruction change only. It does not prove runtime enforcement, workflow execution, deployment, authentication, memory functionality, or production behaviour.
 
 **Standing rule:** For every consequential iQ change, future agents must update the detailed human-readable record under `docs/` and the current-state summary in `README.md` before reporting completion.
+
+---
+
+## 12. README North Star and Product Positioning
+
+**Authority:** The Owner explicitly approved the README north-star wording on 2026-09-16.
+
+**Change:** The README now leads with the product promise: `Know me. Understand what matters. Hold the thread. Help me move toward the future I chose.` It defines the North Star as helping people move toward the future they choose without losing the thread of their lives.
+
+**What iQ is building:** A trusted personal intelligence system that captures what happens, remembers what matters, connects relevant context, shows what is true now, and helps a person take the next useful action. The README also names the intended product components: one intelligence layer across life and work, distinct memory responsibilities, a calm Current Position, and evidence-backed help with human authority retained.
+
+**Source grounding:** This wording is grounded in the current iQ Second Brain purpose and product promise, and is consistent with the Current Spine's purpose of helping Alan understand his position, choose his direction, and make meaningful progress.
+
+**Verification boundary:** This is a documentation and product-positioning change only. It does not represent a production launch, working Memory V1 runtime, verified customer outcome, or changed system authority.
