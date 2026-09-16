@@ -1,7 +1,7 @@
 # iQ Memory System Active-Build Boundary
 
 **Date:** 16 September 2026  
-**Status:** recorded; GitHub publication verification pending  
+**Status:** recorded and published to GitHub `main`  
 **Authority:** Owner authorised the active-versus-legacy boundary, restoration of Policy 1, and the matching README status statement.
 
 ## Scope
@@ -32,8 +32,10 @@ Commit `ad9ed3118910debcf4d50ca79afe7a25545b576a`:
 
 - Local Git whitespace validation (`git diff --check`) passed before the commit.
 - Local Git commit completed with the exact commit ID above.
-- At the time of this record, remote GitHub push and read-back verification remain
-  pending.
+- GitHub push completed for `96d9a39..e137b20` on `main`.
+- GitHub read-back verified the published `AGENTS.md` boundary and Policy 1, the
+  README active-build statement and record link, and this evidence record at
+  commit `e137b2003de2a0ebbd8a34cb2c36055276847c55`.
 
 ## Remaining Human Gate
 
