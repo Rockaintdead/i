@@ -313,3 +313,15 @@ This record documents the Phase 3 research model only. The next action is the pr
 **Source grounding:** This wording is grounded in the current iQ Second Brain purpose and product promise, and is consistent with the Current Spine's purpose of helping Alan understand his position, choose his direction, and make meaningful progress.
 
 **Verification boundary:** This is a documentation and product-positioning change only. It does not represent a production launch, working Memory V1 runtime, verified customer outcome, or changed system authority.
+
+---
+
+## 13. Policy 1 Machine Contract
+
+**Authority:** The Owner explicitly authorised installation of the supplied Policy 1 Machine Contract in `AGENTS.md` on 2026-09-16.
+
+**Change:** Policy 1 is now the first repository instruction. It is mandatory for repository agents and takes priority over the repository-specific operating rules that follow it.
+
+**Contract coverage:** Truth, authority, plan lock, evidence before claims, definition of done, certainty labels, resource discipline, measurable progress, stop conditions, error disclosure, Owner override, three-strikes enforcement, no loopholes, the execution loop, and the required acknowledgement.
+
+**Verification boundary:** This records an agent instruction and governance rule. It does not itself prove that any runtime, workflow, deployment, database, memory service, or external system enforces Policy 1.
