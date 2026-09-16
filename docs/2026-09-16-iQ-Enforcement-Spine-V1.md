@@ -159,3 +159,28 @@ Stage 1 stops after the SRT repair, documentation update, commit evidence, and w
 Stage 2 would require separate human authorization before any Neon/database schema design, branch creation, migration, runtime gate implementation, or operational capability changes.
 
 This document records no Stage 2 authorization and no Neon/database changes.
+---
+## 8. Stage 2 Authorization, Design, and Test Evidence
+**Authority:** The Owner authorized Stage 2 in this conversation on 2026-09-16 after reviewing its stated scope.
+**Scope executed:** Design and test the iQ Core enforcement schema on an isolated temporary Neon branch. No production schema, runtime gate, capability integration, deployment, or operational tool connection was changed.
+**Discovery:** An earlier temporary branch named `test` already existed, contained `core_records`, `core_record_versions`, and `core_operations`, and had stored test data. It was not modified. A new branch was created to avoid overwriting or conflating that prior work.
+**Temporary branch:** `stage2-enforcement-spine-v1`
+**Branch ID:** `br-fragrant-band-akqiec0f`
+**Parent:** `production`
+**Branch type:** schema-only
+**Expiry:** 2026-09-17 13:04:43 GMT+1
+**Schema added on the temporary branch:**
+- `interactions`: immutable captured source records; unique conversation sequence.
+- `tasks`: task authority, SRT version/hash, acceptance criteria, guarded lifecycle, and verification state.
+- `task_events`: append-only task-event ledger.
+- `evidence`: append-only evidence ledger linked to a task and optional task event.
+- Indexes for task-event order and verified-evidence lookup.
+- Append-only triggers rejecting UPDATE or DELETE on `interactions`, `task_events`, and `evidence`.
+- Task lifecycle trigger rejecting definition/authority mutation, deletion, invalid state transitions, and `COMPLETE` without verified evidence.
+**Verified temporary-branch tests:**
+1. Attempted to mark an `AWAITING_VERIFICATION` task `COMPLETE` with no verified evidence. Result: rejected with `COMPLETE requires verified evidence`.
+2. Added a verified evidence record, then completed the same task. Result: one row showed `status = COMPLETE`, `verification_status = VERIFIED`, `has_verified_at = true`, `has_completed_at = true`, and `verified_evidence_count = 1`.
+3. Attempted to rewrite an `interactions` record. Result: rejected as append-only.
+**SQL editor evidence:** schema application completed successfully as 13 statements; constraint test transaction completed successfully as 13 statements; final verification query returned one row.
+**Production boundary:** Production remains the default branch `production`; it was inspected only. No production database write, merge, migration, or promotion was performed.
+**Stop point:** Stage 2 is tested only on the temporary branch. Human authorization is required before applying any schema to production. Stage 3 runtime-gate work remains out of scope and is not authorized by this record.
