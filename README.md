@@ -17,6 +17,8 @@ iQ is a trusted personal intelligence system: a persistent companion that captur
 
 > **Current build state -- 16 September 2026**
 > Stage 1 SRT validation is verified. Stage 2 task and evidence enforcement schema is structurally verified in production. Phase 3 records the Memory Model V1 research and build path; Memory V1 runtime implementation has **not** started.
+>
+> **Active Memory V1 build location:** this repository. `C:\Users\User\iQ\iQ Space` is legacy reference material and is not an implementation or runtime target unless the Owner explicitly authorises a named, read-only comparison or migration task. See the [active-build boundary record](docs/2026-09-16-iQ-Memory-System-Active-Boundary.md).
 
 ---
 

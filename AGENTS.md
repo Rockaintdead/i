@@ -1,3 +1,43 @@
+# iQ Architecture Boundary - Mandatory
+
+## Canonical Build Target
+
+`Rockaintdead/i` is the sole active build target for the new iQ Memory System.
+
+The new system is being created here from the episodic, semantic, procedural,
+working-memory, provenance, and governance research recorded in this repository.
+
+## Legacy Boundary
+
+`C:\Users\User\iQ\iQ Space` is legacy reference material for this memory-system
+programme. It is not an implementation target, runtime target, deployment target,
+or source of architectural authority unless the Owner explicitly authorises a named,
+read-only comparison or migration task.
+
+Do not:
+- inspect, modify, test, deploy, or propose implementation work in iQ Space for the
+  new memory system;
+- infer that an existing iQ Space component is part of the new architecture;
+- redirect work from `Rockaintdead/i` to iQ Space because a similar component exists
+  there.
+
+## Stop Condition
+
+If a request, prior note, or discovered code suggests using iQ Space for the new
+memory system, stop and report:
+
+PLANNED -> CONFLICT: LEGACY/ACTIVE BOUNDARY -> IMPACT -> PROPOSAL -> OWNER
+AUTHORITY REQUIRED.
+
+## Evidence Language
+
+Claims about the new memory system must identify their source:
+- `Rockaintdead/i` implementation and verification evidence: active-system fact.
+- iQ Space findings: legacy-reference fact only.
+- Design not yet implemented: proposal or unverified design.
+
+---
+
 # iQ Machine Contract -- Policy 1
 
 This policy is mandatory for every agent operating in this repository. It takes priority over the repository-specific operating rules below.
