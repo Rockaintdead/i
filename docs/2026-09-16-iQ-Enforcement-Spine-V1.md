@@ -184,3 +184,22 @@ This document records no Stage 2 authorization and no Neon/database changes.
 **SQL editor evidence:** schema application completed successfully as 13 statements; constraint test transaction completed successfully as 13 statements; final verification query returned one row.
 **Production boundary:** Production remains the default branch `production`; it was inspected only. No production database write, merge, migration, or promotion was performed.
 **Stop point:** Stage 2 is tested only on the temporary branch. Human authorization is required before applying any schema to production. Stage 3 runtime-gate work remains out of scope and is not authorized by this record.
+---
+## 9. Stage 2 Production Application Evidence
+**Authority:** The Owner explicitly authorized publication to GitHub `main` and application to Neon `production` in this conversation on 2026-09-16.
+**GitHub documentation commit before production application:** `ba19b78f68ce3e74b80ed3dcf30ce153c3a14c37`.
+**Neon target:** iQ Core, default branch `production` (branch ID `br-gentle-bird-akmv94n8`), database `neondb`.
+**Pre-application inspection:** A read-only inventory found zero base tables in the `public` schema.
+**Production application:** The tested schema was applied successfully as 13 SQL statements.
+**Production read-back:** A metadata query returned these four tables:
+- `interactions`
+- `tasks`
+- `task_events`
+- `evidence`
+It also returned these four live triggers:
+- `interactions.interactions_append_only`
+- `task_events.task_events_append_only`
+- `evidence.evidence_append_only`
+- `tasks.tasks_guarded_lifecycle`
+**Verification boundary:** No synthetic test records were inserted into production. The negative and positive behavioural tests remain documented from the isolated temporary branch, where the identical schema was executed and verified before production application.
+**Current status:** Stage 2 schema is applied and structurally verified in production. Stage 3 runtime-gate implementation remains out of scope and requires separate authorization.
