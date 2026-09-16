@@ -3,7 +3,7 @@
 **Date:** 2026-09-16
 **Repository:** `Rockaintdead/i`
 **Stage:** Stage 1 only
-**Status:** In progress until commit and workflow evidence below are filled from verified GitHub results.
+**Status:** Stage 1 verified from GitHub commit and workflow evidence.
 
 ---
 
@@ -114,15 +114,41 @@ The core rules are:
 
 ## 6. Stage 1 Evidence
 
-This section must be completed only from verified Git and GitHub Actions results.
+This section is recorded from verified Git and GitHub Actions results.
 
-**Commit:** `PENDING`
+**Documentation commit:** `5f3a65952c1809345ad701cd115ec8b0dcc82453`
 
-**Workflow:** `PENDING`
+**SRT repair commit:** `1aaceaf058e540356afe6ecb688cac898ca4987a`
 
-**Workflow result:** `PENDING`
+**SRT content blob after repair:** `339274e9040709f83dbb0e3611239597a3d3d73c`
 
-**Evidence notes:** Pending until the commit is pushed and the existing `Validate SRT` workflow run is read back from GitHub.
+**Workflow:** `Validate SRT`
+
+**Workflow file:** `.github/workflows/validate-SRT.yml`
+
+**Workflow run:** `35093084753`
+
+**Workflow URL:** `https://github.com/Rockaintdead/i/actions/runs/35093084753`
+
+**Workflow event:** `push`
+
+**Workflow head branch:** `main`
+
+**Workflow head SHA:** `1aaceaf058e540356afe6ecb688cac898ca4987a`
+
+**Workflow status:** `completed`
+
+**Workflow conclusion:** `success`
+
+**Job:** `validate`
+
+**Job ID:** `104783798633`
+
+**Job conclusion:** `success`
+
+**Validated step:** `Validate SRT`
+
+**Validated step conclusion:** `success`
 
 ---
 
@@ -131,3 +157,5 @@ This section must be completed only from verified Git and GitHub Actions results
 Stage 1 stops after the SRT repair, documentation update, commit evidence, and workflow evidence are recorded.
 
 Stage 2 would require separate human authorization before any Neon/database schema design, branch creation, migration, runtime gate implementation, or operational capability changes.
+
+This document records no Stage 2 authorization and no Neon/database changes.
