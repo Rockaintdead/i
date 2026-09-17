@@ -15,8 +15,8 @@ iQ is a trusted personal intelligence system: a persistent companion that captur
 - A calm Current Position view that answers: where am I, what matters, what changed, and what next?
 - Safe, evidence-backed help that proposes action while keeping the human in charge.
 
-> **Current build state -- 16 September 2026**
-> Stage 1 SRT validation is verified. Stage 2 task and evidence enforcement schema is structurally verified in production. Phase 3 records the Memory Model V1 research and build path; Memory V1 runtime implementation has **not** started.
+> **Current build state -- 17 September 2026**
+> Stage 1 SRT validation is verified. Stage 2 task and evidence enforcement schema is structurally verified in production. Memory V1 has now been implemented and behaviour-tested on an isolated Neon branch, including multi-instance isolation, source provenance, semantic promotion, correction/supersession, one-current-value constraints, Working Memory uniqueness and append-only audit tests. **Memory V1 has not been applied to production and the runtime Memory Service is not yet connected.**
 >
 > **Active Memory V1 build location:** this repository. `C:\Users\User\iQ\iQ Space` is legacy reference material and is not an implementation or runtime target unless the Owner explicitly authorises a named, read-only comparison or migration task. See the [active-build boundary record](docs/2026-09-16-iQ-Memory-System-Active-Boundary.md).
 
@@ -57,7 +57,7 @@ iQ memory has four cooperating lanes. They are not interchangeable.
 
 Future commitments remain in Goals, Projects, Tasks, Routines, Bills, and calendar systems. Memory can connect to those records, but it does not replace their ownership.
 
-Read the full [Phase 3 Memory Model V1 record](docs/2026-09-16-iQ-Enforcement-Spine-V1.md#10-phase-3----memory-model-v1-research-record).
+Read the full [Phase 3 Memory Model V1 record](docs/2026-09-16-iQ-Enforcement-Spine-V1.md#10-phase-3----memory-model-v1-research-record) and the [Memory V1 implementation record](docs/2026-09-17-iQ-Memory-V1-implementation-record.md).
 
 ---
 
@@ -97,11 +97,11 @@ For consequential work, iQ stops when authority, scope, evidence, or verificatio
 |---|---|---|
 | SRT enforcement | Verified | [SRT conversation record](docs/2026-09-16-iQ-SRT-conversation-record.md) |
 | Enforcement Spine V1 | Stages 1 and 2 evidenced | [Enforcement Spine record](docs/2026-09-16-iQ-Enforcement-Spine-V1.md) |
-| Memory Model V1 | Research and design recorded; implementation awaiting separate authority | [Phase 3 record](docs/2026-09-16-iQ-Enforcement-Spine-V1.md#10-phase-3----memory-model-v1-research-record) |
+| Memory Model V1 | Schema implemented and behaviour-tested on an isolated Neon branch; production/runtime pending | [Memory V1 implementation record](docs/2026-09-17-iQ-Memory-V1-implementation-record.md) |
 | Repository operating rules | Current and published | [AGENTS.md](AGENTS.md) |
 | Policy 1 machine contract | Mandatory for repository agents | [AGENTS.md](AGENTS.md#iq-machine-contract----policy-1) |
 
-**Next proposed slice:** a read-only audit of the four memory lanes, current code paths, owner routing, and legacy Working Memory. Its output is an `EXISTS -> REUSE -> MISSING -> RECOVERY-ONLY` map before any Memory V1 implementation begins.
+**Next proposed slice:** preserve the exact tested Memory V1 migration package, re-run it through a promotion-safe execution path, obtain explicit production-schema approval, then apply/read-back the schema before connecting the runtime Memory Service and Base44 Composer.
 
 ---
 
