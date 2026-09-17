@@ -16,7 +16,7 @@ iQ is a trusted personal intelligence system: a persistent companion that captur
 - Safe, evidence-backed help that proposes action while keeping the human in charge.
 
 > **Current build state -- 17 September 2026**
-> Stage 1 SRT validation is verified. Stage 2 task and evidence enforcement schema is structurally verified in production. Memory V1 has now been implemented and behaviour-tested on an isolated Neon branch, including multi-instance isolation, source provenance, semantic promotion, correction/supersession, one-current-value constraints, Working Memory uniqueness and append-only audit tests. **Memory V1 has not been applied to production and the runtime Memory Service is not yet connected.**
+> Stage 1 SRT validation is verified. Stage 2 task and evidence enforcement schema is structurally verified in production. **Memory V1 is now applied to Neon production and verified**, including multi-instance isolation constraints, source provenance structures, versioned semantic/procedural memory, Working Memory and Current Position uniqueness, and append-only audit protections. Production Memory V1 tables are currently empty: no personal memory has been ingested yet. The runtime Memory Service and Base44 Composer are **not yet connected** to this schema.
 >
 > **Active Memory V1 build location:** this repository. `C:\Users\User\iQ\iQ Space` is legacy reference material and is not an implementation or runtime target unless the Owner explicitly authorises a named, read-only comparison or migration task. See the [active-build boundary record](docs/2026-09-16-iQ-Memory-System-Active-Boundary.md).
 
@@ -97,11 +97,11 @@ For consequential work, iQ stops when authority, scope, evidence, or verificatio
 |---|---|---|
 | SRT enforcement | Verified | [SRT conversation record](docs/2026-09-16-iQ-SRT-conversation-record.md) |
 | Enforcement Spine V1 | Stages 1 and 2 evidenced | [Enforcement Spine record](docs/2026-09-16-iQ-Enforcement-Spine-V1.md) |
-| Memory Model V1 | Schema implemented and behaviour-tested on an isolated Neon branch; production/runtime pending | [Memory V1 implementation record](docs/2026-09-17-iQ-Memory-V1-implementation-record.md) |
+| Memory Model V1 | **Production schema applied and verified; runtime Memory Service still pending** | [Memory V1 implementation record](docs/2026-09-17-iQ-Memory-V1-implementation-record.md) |
 | Repository operating rules | Current and published | [AGENTS.md](AGENTS.md) |
 | Policy 1 machine contract | Mandatory for repository agents | [AGENTS.md](AGENTS.md#iq-machine-contract----policy-1) |
 
-**Next proposed slice:** preserve the exact tested Memory V1 migration package, re-run it through a promotion-safe execution path, obtain explicit production-schema approval, then apply/read-back the schema before connecting the runtime Memory Service and Base44 Composer.
+**Next proposed slice:** implement the runtime Memory Service against the live Neon schema, map authenticated Base44 users to `iq_instance_id`, then prove one end-to-end capture → promotion → recall → correction loop with provenance before enabling broader knowledge ingestion or semantic/vector retrieval.
 
 ---
 
@@ -126,6 +126,7 @@ For consequential work, iQ stops when authority, scope, evidence, or verificatio
 
 - [SRT authority file](srt.yaml)
 - [GitHub workflows](.github/workflows/)
+- [Memory V1 production migration](db/migrations/2026-09-17-memory-v1.sql)
 - [Human-readable Git documentation](docs/)
 
 ---
